@@ -48,9 +48,8 @@ class ContactsList extends Component {
     return (
       <List
         dataArray={contactList}
-        renderRow={(contact) => <ListItem>
-        <Text>{contact.familyName}
-        </Text>
+        renderRow={(contact, index) => <ListItem index={index}>
+        <Text>{contact.familyName}</Text>
         <Text>{contact.givenName}</Text>
       </ListItem>}></List>
     )

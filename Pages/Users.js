@@ -61,10 +61,6 @@ class Users extends Component {
     });
   }
 
-  prepareUserPreview(userList) {
-    return userList.map((user) => this.renderUserPreview(user));
-  }
-
   renderLoadingView() {
     return (
       <Container>
@@ -75,9 +71,13 @@ class Users extends Component {
     );
   }
 
-  renderUserPreview(user) {
+  prepareUserPreview(userList) {
+    return userList.map((user, index) => this.renderUserPreview(user, index));
+  }
+
+  renderUserPreview(user, index) {
     return (
-      <ListItem avatar>
+      <ListItem key={index} avatar>
         <Left>
           <Thumbnail source={{
             uri: user.picture.thumbnail

@@ -32,10 +32,6 @@ class Reminder extends Component {
                             <Label>Reminder</Label>
                             <Input/>
                         </Item>
-                        <Item floatingLabel last>
-                            <Label>Password</Label>
-                            <Input/>
-                        </Item>
                         {remianderDays}
                         <Button block>
                             <Text>Save</Text>
@@ -47,14 +43,14 @@ class Reminder extends Component {
     }
 
     renderDays(days) {
-        return days.map((day) => this.previewDays(day));
+        return days.map((day, index) => this.previewDays(day, index));
     }
 
-    previewDays(day) {
+    previewDays(day, index) {
         return (
-            <ListItem>
+            <ListItem key={index}>
                 <CheckBox checked={false}/>
-                <Text>{day}</Text>
+                <Text> {day}</Text>
             </ListItem>
         )
     }
