@@ -3,6 +3,7 @@ import {Container, Header, Tab, Tabs} from 'native-base';
 
 import Users from './Users';
 import Reminder from './Reminder';
+import ContactsList from './Contacts';
 
 class TabsMenu extends Component {
   render() {
@@ -10,14 +11,14 @@ class TabsMenu extends Component {
       <Container>
         <Header hasTabs/>
         <Tabs>
-          <Tab heading="User">
-            <Users/>
-          </Tab>
           <Tab heading="Reminder">
             <Reminder/>
           </Tab>
+          <Tab heading="User">
+            <Users/>
+          </Tab>
           <Tab heading="Contacts">
-            {/*<Reminder/>*/}
+            <ContactsList/>
           </Tab>
           <Tab heading="Photo">
             {/*<Reminder/>*/}

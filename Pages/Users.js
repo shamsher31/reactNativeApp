@@ -49,12 +49,12 @@ class Users extends Component {
   }
 
   refreshUserList() {
-    this.setState({showLoading: true});
+    this.setState({showLoading: true, userList: []});
     this.getUserList();
   }
 
   getUserList() {
-    return fetch('https://randomuser.me/api/?results=20').then((response) => response.json()).then((responseJson) => {
+    return fetch('https://randomuser.me/api/?results=15').then((response) => response.json()).then((responseJson) => {
       this.setState({showLoading: false, userList: responseJson.results});
     }).catch((error) => {
       console.error(error);
