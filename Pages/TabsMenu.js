@@ -10,11 +10,11 @@ class TabsMenu extends Component {
       <Container>
         <Header hasTabs/>
         <Tabs>
-          <Tab heading="Reminder">
-            <Reminder/>
-          </Tab>
           <Tab heading="User">
             <Users/>
+          </Tab>
+          <Tab heading="Reminder">
+            <Reminder/>
           </Tab>
           <Tab heading="Contacts">
             {/*<Reminder/>*/}

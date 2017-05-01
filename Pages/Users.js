@@ -5,6 +5,7 @@ import {
   List,
   ListItem,
   Thumbnail,
+  Button,
   Text,
   Body,
   Spinner,
@@ -35,9 +36,21 @@ class Users extends Component {
       <Container>
         <Content>
           {userPreview}
+          <Button
+            block
+            onPress={this
+            .refreshUserList
+            .bind(this)}>
+            <Text>Refersh</Text>
+          </Button>
         </Content>
       </Container>
     );
+  }
+
+  refreshUserList() {
+    this.setState({showLoading: true});
+    this.getUserList();
   }
 
   getUserList() {
