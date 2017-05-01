@@ -26,7 +26,7 @@ class Users extends Component {
   }
 
   render() {
-    if (!this.state.userList) {
+    if (this.state.showLoading) {
       return this.renderLoadingView();
     }
     const userPreview = this.prepareUserPreview(this.state.userList);
