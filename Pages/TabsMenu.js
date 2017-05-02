@@ -16,14 +16,14 @@ class TabsMenu extends Component {
           </Left>
         </Header>
         <Tabs>
-          <Tab heading={<TabHeading><Icon name="alarm" /></TabHeading>}>
-            <Reminder/>
+          <Tab heading={<TabHeading><Icon name="contacts" /></TabHeading>}>
+            <ContactsList/>
           </Tab>
           <Tab heading={<TabHeading><Icon name="people" /></TabHeading>}>
             <Users/>
           </Tab>
-          <Tab heading={<TabHeading><Icon name="contacts" /></TabHeading>}>
-            <ContactsList/>
+          <Tab heading={<TabHeading><Icon name="alarm" /></TabHeading>}>
+            <Reminder/>
           </Tab>
           <Tab heading={<TabHeading><Icon name="md-photos" /></TabHeading>}>
             <Photos />
